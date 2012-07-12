@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 
+gem 'heroku'
 gem 'jquery-rails'
 gem 'pg'
 gem 'thin'
