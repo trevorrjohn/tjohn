@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 
+gem 'haml-rails'
 gem 'heroku'
 gem 'jquery-rails'
 gem 'pg'
@@ -12,7 +13,6 @@ gem 'thin'
 group :assets do
   gem 'bootstrap-sass'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'haml-rails'
   gem 'sass-rails',   '~> 3.2.3'
 
   gem 'uglifier', '>= 1.0.3'
