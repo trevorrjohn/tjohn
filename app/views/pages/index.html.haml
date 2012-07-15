@@ -1,3 +1,14 @@
-.body
-  .container
-    %h1 Welcome
+.container
+  %h1 Welcome
+
+  %div#canvas
+    %h4{ id: 'help', 'data-original-title' => 'Drag around the object to find out about me'}
+      Need help?
+    %div{ id: 'github', class: 'drop drop-github' }
+    %div{ id: 'twitter', class: 'drop drop-twitter' }
+    %div{ id: 'linkedin', class: 'drop drop-linkedin' }
+
+    %div{ id: 'drag-box', class: 'drag-box' }
+      = link_to '<h3>Github</h3>'.html_safe, 'http://www.github.com/tjohn', target: '_blank', id: 'github-drag-link', display: 'none'
+      = link_to '<h3>Twitter</h3>'.html_safe, 'http://www.twitter.com/trevorrjohn', target: '_blank', id: 'twitter-drag-link', display: 'none'
+      = link_to '<h3>Linkedin</h3>'.html_safe, 'http://www.linkedin.com/in/trevorjohn', target: '_blank', id: 'linkedin-drag-link', display: 'none'
