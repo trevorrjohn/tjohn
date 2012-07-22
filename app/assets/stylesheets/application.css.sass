@@ -1,17 +1,16 @@
-body
-  padding: 70px
-
-$iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png', image)
-$iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png', image)
-
-$navbarHeight: 60px
-$baseLineHeight: 20px
-
 @import "variables"
 @import "header-bar"
 @import "drag-boxes"
 @import "jquery.ui.all"
+
+$navbarHeight: 60px
+$baseLineHeight: 20px
+$iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png', image)
+$iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png', image)
+
 @import "bootstrap"
 @import "bootstrap-responsive"
 
-
+body
+  padding: 70px
+  background-color: $lightGray
