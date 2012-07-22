@@ -6,7 +6,10 @@ gem 'haml-rails'
 gem 'heroku'
 gem 'jquery-rails'
 gem 'pg'
-gem 'thin'
+
+group :production do
+  gem 'unicorn'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +24,10 @@ end
 
 group :test, :development do
   gem 'pry'
+end
+
+group :development do
+  gem 'thin'
 end
 
 group :test do
