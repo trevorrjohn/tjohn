@@ -16,32 +16,6 @@ $(document).ready(function() {
       $(this).animate({"left": "-=" + width + "px"}, "slow");
     }
   })
-
-  var orangeToggle = true;
-  $("#orange").click(function() {
-    var width = $(window).width()/3 - 40;
-
-    if(orangeToggle) {
-      orangeToggle = false;
-      $(this).animate({"left": "+=" + width + "px"}, "slow");
-    } else {
-      orangeToggle = true;
-      $(this).animate({"left": "-=" + width + "px"}, "slow");
-    }
-  })
-
-  var baseToggle = true;
-  $("#base").click(function() {
-    var width = $(window).width()/3 - 40;
-
-    if(baseToggle) {
-      baseToggle = false;
-      $(this).animate({"right": "+=" + width + "px"}, "slow");
-    } else {
-      baseToggle = true;
-      $(this).animate({"right": "-=" + width + "px"}, "slow");
-    }
-  })
 });
 
 

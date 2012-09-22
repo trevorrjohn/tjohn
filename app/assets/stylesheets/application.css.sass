@@ -16,25 +16,45 @@ body
 
   .slider
     position: absolute
+    top: 0
     width: 33.333333%
     height: inherit
-    box-shadow: 3px 1px 2px gray
+    -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.5)
+    -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.5)
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5)
     border-radius: 6px
 
-  p, h2
+  h2, a, h3
     color: white
     font-family: 'Helvetica', 'Ariel', 'sans-serif'
     margin-left: 10px
 
+  a
+    color: $base
+    font-size: 18px
+    text-decoration: none
+    &:hover
+      font-style: bold
+
+  .pane
+    position: absolute
+    top: 20%
+  #left
+    left: 30px
+
   #red
     left: 5px
-    z-index: 1
+    z-index: 3
     background: $red
+    h2
+      margin-top: 20%
+
     &:hover
+      cursor: pointer
       background: $redHover
 
   #orange
-    z-index: 3
+    z-index: 2
     background: $orange
     left: 33%
     &:hover
@@ -42,7 +62,7 @@ body
 
   #base
     background: $base
-    z-index: 2
+    z-index: 1
     right: 5px
     &:hover
       background: $baseHover
