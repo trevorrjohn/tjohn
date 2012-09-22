@@ -1,11 +1,48 @@
-@import 'variables'
-@import 'header-bar'
-@import 'drag-boxes'
-@import 'jquery.ui.all'
-@import 'bootstrap-overrides'
-
-@import 'bootstrap'
-@import 'bootstrap-responsive'
+$base: #FAFAC6
+$baseHover: #F6F6C3
+$orange: #FF4411
+$orangeHover: #FE4310
+$red: #D40015
+$redHover: #da0015
+$lightGray: #BAC0AC
+$gray: #98A89E
 
 body
-  padding: 70px
+  background-color: $gray
+  padding: 0
+  margin: 0
+  height: 100px
+
+
+  .slider
+    position: absolute
+    width: 33.333333%
+    height: inherit
+    box-shadow: 3px 1px 2px gray
+    border-radius: 6px
+
+  p, h2
+    color: white
+    font-family: 'Helvetica', 'Ariel', 'sans-serif'
+    margin-left: 10px
+
+  #red
+    left: 5px
+    z-index: 1
+    background: $red
+    &:hover
+      background: $redHover
+
+  #orange
+    z-index: 3
+    background: $orange
+    left: 33%
+    &:hover
+      background: $orangeHover
+
+  #base
+    background: $base
+    z-index: 2
+    right: 5px
+    &:hover
+      background: $baseHover
