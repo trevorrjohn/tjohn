@@ -3,7 +3,8 @@ $baseHover: #F6F6C3
 $orange: #FF4411
 $orangeHover: #FE4310
 $red: #D40015
-$redHover: #da0015
+$redHover: #DA0015
+$redActive: #B00010
 $lightGray: #BAC0AC
 $gray: #98A89E
 
@@ -17,9 +18,11 @@ body
   .slider
     position: absolute
     top: 0
-    width: 33.333333%
     height: inherit
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
     box-shadow: 0px 0px 10px rgba(0,0,0,0.5)
+    -moz-border-radius: 1px 1px 1px rgba(0,0,0,0.5)
     border: 1px 1px 1px rgba(0,0,0,0.5)
     border-radius: 6px
 
@@ -32,7 +35,6 @@ body
     color: $base
     font-size: 18px
     text-decoration: none
-    position: absolute
 
     &:hover
       font-weight: bold
@@ -42,11 +44,15 @@ body
 
   .pane
     background: $lightGray
-    border-radius: 5px
-    width: 275px
-    height: 100px
     position: absolute
     top: 20%
+    width: 275px
+    height: 100px
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.5)
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.5)
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5)
+    border-radius: 5px
+    -moz-border-radius: 5px
 
   #email
     position: absolute
@@ -73,11 +79,14 @@ body
     z-index: 3
     background: $red
     h2
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5)
       margin-top: 20%
 
     &:hover
       cursor: pointer
       background: $redHover
+    &:active
+      background: $redActive
 
   #orange
     z-index: 2
