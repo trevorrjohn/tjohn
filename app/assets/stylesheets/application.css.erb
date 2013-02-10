@@ -78,8 +78,8 @@ a:hover {
 @media all and (max-width: 600px) {
   body {
     font-family: Helvetica, 'Ariel Black';
-    background-color: #4d535a;
-    color: #233749;
+    background-color: #d9d1ba;
+    color: #1e3a40;
     font-weight: bold;
     width: 480px;
   }
@@ -92,7 +92,7 @@ a:hover {
     margin: 0;
     width: 480px;
     height: 50px;
-    background: #233749;
+    background: #1e3a40;
   }
 
   .wrapper {
@@ -104,22 +104,34 @@ a:hover {
     width: 100%;
   }
 
+  .sections { z-index: 4 }
+
   #title {
     width: 100%;
     text-align: center;
-    color: #4d535a;
+    color: #d9d1ba;
     font-size: 30px;
     line-height: 40px;
     margin: 0;
     padding: 0;
   }
 
+  #rightstrip {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    background-color: #f2a057;
+    height: 100%;
+    z-index: -3;
+  }
+
   h3 {
-    color: #4d535a;
+    color: #d9d1ba;
     font-size: 18px;
     line-height: 30px;
     padding: 0 10px;
-    background: #233749;
+    background: #1e3a40;
     margin-left: -10px;
     height: 30px;
   }
@@ -134,14 +146,19 @@ a:hover {
 
   ul {
     list-style: none;
+    z-index: 4;
   }
 
   p {
-    color: #e2e2e2;
+    width: 90%;
+    color: #1E3A40;
+    z-index: 5;
+    font-weight: normal;
+    font: 'Helvetica', 'Sans';
   }
 
   a {
-    color: #e2e2e2;
+    color: #1E3A40;
     font-weight: normal;
     font-style: italic;
     text-decoration: none;
