@@ -1,0 +1,73 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}/
+    %meta{content: "chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %title Trevor John
+    %link{href: "assets/stylesheets/main.css", media: "all and (min-device-width: 600px)", rel: "stylesheet", type: "text/css"}/
+    %link{href: "assets/stylesheets/mobile.css", media: "all and (max-device-width: 599px)", rel: "stylesheet", type: "text/css"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700", rel: "stylesheet", type: "text/css"}/
+    %meta{content: "width=device-width, initial-scale=.67, user-scalable=no", name: "viewport"}/
+    /[if lt IE 9]
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  %body#body
+    .wrapper
+      #screen
+        %header#header
+          %h1#title Trevor John
+        #sections
+          #main
+            %p#main-text
+              Trevor was born in Detroit and now lives in
+              %br/
+              Medford, Ma. He is currently a student at Tufts
+              %br/
+              University, studying both computer science and civil
+              %br/
+              engineering. His goals are to design and build innovative
+              %br/
+              products or tools, either in the digital or the physical world.
+              %br/
+              After graduating from Tufts, he will be joining Pivotal
+              %br/
+              Labs in New York. He is an avid hockey and soccer
+              %br/
+              fan and enjoys reading in his spare time.
+          #contact
+            %h3 Contact me
+            %ul
+              %li
+                %a{href: "http://github.com/tjohn", target: "_blank"} Github
+              %li
+                %a{href: "http://twitter.com/trevorrjohn", target: "_blank"} @trevorrjohn
+              %li
+                %a{href: "http://linkedin.com/in/trevorjohn", target: "_blank"} Linekdin
+              %li
+                %a{href: "mailto:trevor@john.tj", target: "_blank"} Email
+        %footer#footer
+          %a{href: "http://en.wikipedia.org/wiki/Norval_Morrisseau", target: "_blank"} Find out about the artist
+      #mobile
+        #headerbg
+        #rightstrip
+        .wrapper
+          %header#header
+            %h1#title TREVOR JOHN
+          .sections
+            %h3#bio BIO
+            %p.info
+              Trevor was born in Detroit and now lives in Medford, Ma. He
+              is currently a student at Tufts University, studying both computer science and civil engineering.
+              His goals are to design and build innovative products or tools, either in the digital or the physical world.
+              After graduating from Tufts, he will be joining Pivotal Labs in New York.
+              He is an avid hockey and soccer fan and enjoys reading in his spare time.
+            %h3#mobile-contact CONTACT ME
+            %ul.info
+              %li
+                %a{href: "http://github.com/tjohn", target: "_blank"} GitHub
+              %li
+                %a{href: "http://twitter.com/trevorrjohn", target: "_blank"} @trevorrjohn
+              %li
+                %a{href: "http://linkedin.com/in/trevorjohn", target: "_blank"} LinkedIn
+              %li
+                %a{href: "mailto:trevor@john.tj", target: "_blank"} Email
+    /[if !IE] <script>fixScale(document);</script>
