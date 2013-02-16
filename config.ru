@@ -1,5 +1,6 @@
 require './app'
-require 'sinatra/activerecord/rake'
+require 'haml'
+require 'sinatra/activerecord'
 require './config/environments'
 
 run Sinatra::Application
