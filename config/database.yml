@@ -4,7 +4,6 @@ development:
   database: tjohn_development
   username: trevorjohn
   password:
-  host: localhost
   pool: 5
   min_messages: WARNING
 

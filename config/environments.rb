@@ -1,6 +1,6 @@
 configure :production, :development do
   # Database connection
-  db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/tjohn_development')
+  db = URI.parse(ENV['HEROKU_POSTGRESQL_BRONZE_URL'] || 'postgres://localhost/tjohn_development')
 
   ActiveRecord::Base.establish_connection(
     adapter:  db.scheme == 'postgres' ? 'postgresql' : db.scheme,
