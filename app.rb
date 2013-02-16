@@ -18,7 +18,7 @@ helpers do
   end
 
   def production?
-    ENV['environment'] == 'production'
+    Sinatra::Base.production?
   end
 end
 
