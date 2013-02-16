@@ -12,7 +12,11 @@
 $(function() {
   $('#container').masonry({
     itemSelector : '.item',
-    columnWidth : 240,
+    columnWidth : 220,
     isAnimated : true
   });
 });
+
+$(window).load(function(){
+  $('#container').masonry('reload');
+})
