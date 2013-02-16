@@ -67,3 +67,8 @@ a:hover {
   display: none;
 }
 
+#reading {
+  font-weight: bold;
+  font-style: normal;
+}
+

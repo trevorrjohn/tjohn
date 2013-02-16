@@ -1,0 +1,13 @@
+#container {
+  margin: 0 auto;
+  width: 1002px;
+}
+
+.item {
+  width: 220px;
+  margin: 15px;
+  float: left;
+  background: #404040;
+  opacity: 0.4;
+  padding: 10px;
+}
