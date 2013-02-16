@@ -3,8 +3,16 @@ development:
   encoding: unicode
   database: tjohn_development
   username: trevorjohn
-  password: 
+  password:
   host: localhost
   pool: 5
   min_messages: WARNING
 
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: tjohn_production
+  pool: 5
+  username: postgres
+  password:
+  min_messages: WARNING
