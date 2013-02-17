@@ -1,3 +1,13 @@
+#header {
+  background: #ebebeb;
+  border-right: 1px solid #414141;
+  border-left: 1px solid #414141;
+  position: relative;
+  width: 1202px;
+  min-height: 60px;
+  margin: -10px auto;
+}
+
 #body {
   background-image: url("../images/background.jpg");
   background-repeat: repeat;
@@ -5,8 +15,10 @@
 }
 
 #home {
-  position: absolute;
-  bottom: 0;
+  color: #e2e2e2;
+  position: fixed;
+  bottom: 10px;
+  left: 25px;
 }
 
 #wrapper {
@@ -17,7 +29,7 @@
   position: relative;
   width: 1202px;
   margin: 0 auto;
-  margin-top: -10px;
+  padding-bottom: 60px;
 }
 
 .container {
@@ -66,4 +78,9 @@
   text-align: center;
   border: 1px solid #eeeeee;
   background: #414141;
+  overflow: scroll;
+}
+
+.comment {
+  text-align: left;
 }
