@@ -1,16 +1,36 @@
+#body {
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat;
+  background-size: 82%;
+}
+
+#home {
+  position: absolute;
+  bottom: 0;
+}
+
 #wrapper {
+  min-height: 1000px;
+  background: #ebebeb;
+  border-right: 1px solid #414141;
+  border-left: 1px solid #414141;
   position: relative;
   width: 1202px;
+  margin: 0 auto;
+  margin-top: -10px;
 }
+
 .container {
-  width: 240px;
-  position: absolute;
+  float: left;
+  width: 220px;
   margin: 10px;
-  top: 0;
-  right: 0;
   z-index: 1;
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
+}
+
+.book, .back, .shadow {
+  border-radius: 10px;
 }
 
 .card {
@@ -18,15 +38,14 @@
   width: 100%;
   height: 100%;
   -webkit-transform-style: preserve-3d;
-  -webkit-transition: all 0.5s linear;
+  -webkit-transition: all 0.4s linear;
   -moz-transform-style: preserve-3d;
-  -moz-transition: all 0.5s linear;
+  -moz-transition: all 0.4s linear;
 }
 
 .container:hover .card {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
-  box-shadow: -5px 5px 5px #aaa;
 }
 
 .face {
@@ -43,7 +62,8 @@
   -moz-transform: rotateY(180deg);
   box-sizing: border-box;
   padding: 10px;
-  color: white;
+  color: #eeeeee;
   text-align: center;
-  background-color: #aaa;
+  border: 1px solid #eeeeee;
+  background: #414141;
 }

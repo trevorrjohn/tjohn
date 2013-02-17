@@ -7,13 +7,12 @@
     %link{href: "assets/stylesheets/application.css", rel: "stylesheet", type: "text/css"}/
     %link{href: "assets/stylesheets/books.css", rel: "stylesheet", type: "text/css"}/
     %script{ src: "//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" }
+    %script{ src: "assets/javascripts/masonry.js" }
     %script{ src: "assets/javascripts/books.js" }
 
     %link{href: "http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700", rel: "stylesheet", type: "text/css"}/
     %meta{content: "width=device-width, initial-scale=.67, user-scalable=no", name: "viewport"}/
   %body#body
-    %a#home{ href: "/" } Home
-
     #wrapper
       .container
         .card.shadow
@@ -24,15 +23,15 @@
       .container
         .card.shadow
           .front.face
-            %img.book{ src: 'https://s3.amazonaws.com/tjohn/the_eye_of_the_world.jpg' }
-          .back.face
-            %p The Eye of the World
-      .container
-        .card.shadow
-          .front.face
             %img.book{ src: 'https://s3.amazonaws.com/tjohn/moonwalking_with_einstein.jpg' }
           .back.face
             %p Moonwalking with Einstein
+      .container
+        .card.shadow
+          .front.face
+            %img.book{ src: 'https://s3.amazonaws.com/tjohn/the_eye_of_the_world.jpg' }
+          .back.face
+            %p The Eye of the World
       .container
         .card.shadow
           .front.face
@@ -51,3 +50,5 @@
             %img.book{ src: 'https://s3.amazonaws.com/tjohn/surely_youre_joking_mr_eynman.jpeg' }
           .back.face
             %p Surely You're Joking, Mr. Feynmen
+  %footer
+    %a#home{ href: "/" } Home
