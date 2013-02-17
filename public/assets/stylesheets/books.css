@@ -14,13 +14,6 @@
   background-size: 82%;
 }
 
-#home {
-  color: #e2e2e2;
-  position: fixed;
-  bottom: 10px;
-  left: 25px;
-}
-
 #wrapper {
   min-height: 1000px;
   background: #ebebeb;
@@ -109,12 +102,9 @@ label {
 
 .text_input {
   position: relative;
-  width: 200px;
+  width: 400px;
 }
 
-#books {
-  color: #e2e2e2;
-  position: fixed;
-  bottom: 10px;
-  right: 30px;
+textarea {
+  width: 400px;
 }

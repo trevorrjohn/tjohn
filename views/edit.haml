@@ -1,0 +1,24 @@
+%link{href: "/assets/stylesheets/books.css", rel: "stylesheet", type: "text/css"}/
+
+#header
+#wrapper
+  %h1 Edit a book
+  #content
+    %form#edit_book.edit_book{ action: "/update", method: "post", accept: { charset: "UTF-8" } }
+
+      %input{ type: 'hidden', name: 'id', value: "#{ @book.id }" }
+
+      %label{ for: "book_title" } Title
+      %input.text_input#book_title{ name: "book[title]", type: "text", autocomplete: 'off', value: "#{ @book.title }" }
+      %br/
+      %label{ for: "book_url" } URL
+      %input.text_input#book_url{ name: "book[url]", type: "url", value: "#{ @book.url }" }
+      %br/
+      %label{ for: "book_comment" } Comment
+      %textarea#book_comment{ name: "book[comment]", type: "text", rows: 7, cols: 30, value: "#{ @book.comment }" }
+      %br/
+      %input{ type: "submit", value: "Update book" }
+
+  %footer
+    %a#home{ href: "/" } Home
+    %a#books{ href: "/books" } Books

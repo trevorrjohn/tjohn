@@ -14,4 +14,9 @@
           %td= book.title
           %td= book.url
           %td= book.comment
-          %td Edit
+          %td
+            %a{ href: "/edit/#{ book.id }" } Edit
+
+%footer
+  %a#home{ href: "/" } Home
+  %a#books{ href: "/books" } Books

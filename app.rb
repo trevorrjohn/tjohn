@@ -22,6 +22,7 @@ get '/view' do
 
   haml :view
 end
+
 get '/new' do
   protected!
 
@@ -36,6 +37,24 @@ post '/create' do
   Book.create(params[:book])
 
   redirect to('/view'), 303
+end
+
+post '/update' do
+  protected!
+
+  @book = Book.find(params[:id])
+  @book.update_attributes(params[:book])
+
+  redirect to('/view'), 303
+end
+
+get "/edit/:id" do
+  protected!
+
+  @title = "Edit"
+  @book = Book.find(params[:id])
+
+  haml :edit
 end
 
 get '/*' do
