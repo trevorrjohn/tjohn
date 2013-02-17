@@ -15,7 +15,7 @@
       %input.text_input#book_url{ name: "book[url]", type: "url", value: "#{ @book.url }" }
       %br/
       %label{ for: "book_comment" } Comment
-      %textarea#book_comment{ name: "book[comment]", type: "text", rows: 7, cols: 30, value: "#{ @book.comment }" }
+      %textarea#book_comment{ name: "book[comment]", type: "text", rows: 7, cols: 30 }= @book.comment
       %br/
       %input{ type: "submit", value: "Update book" }
 
