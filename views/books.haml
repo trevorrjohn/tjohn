@@ -1,97 +1,15 @@
 %link{href: "assets/stylesheets/books.css", rel: "stylesheet", type: "text/css"}/
 #header
 #wrapper
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/the_great_hunt.jpg' }
-      .back.face
-        %h3 The Great Hunt
-        %p.comment This was a bit dissapointing after the first book, the characters where never really developed or grew.
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/moonwalking_with_einstein.jpg' }
-      .back.face
-        %h3 Moonwalking with Einstein
-        %p.comment A very entertaining story, although not very practicle it gives a great insight to many parlor tricks |
-          and some good tips on keeping your memory fresh. |
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/the_eye_of_the_world.jpg' }
-      .back.face
-        %h3 The Eye of the World
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/hitchhickers_guide_to_the_galaxy.jpg' }
-      .back.face
-        %h3 The Hitchhiker's Guide to the Galaxy
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/a_game_of_thrones.jpg' }
-      .back.face
-        %h3 A Game of Thrones
-        %p.comment Really a great read, there is so much depth and every character feels very well constructed.
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/surely_youre_joking_mr_eynman.jpeg' }
-      .back.face
-        %h3 Surely You're Joking, Mr. Feynmen
-        %p.comment My favorite book, Feynmen is pure genious.
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/a_storm_of_swords.jpg' }
-      .back.face
-        %h3 A Storm of Swords
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/atlas_shrugged.jpg' }
-      .back.face
-        %h3 Atlas Shrugged
-        %p.comment This book was a tough read, Rand really loves to knock you over the head with her beliefs. |
-          I did enjoy the book, but had to skim a few chapters just to get through it. |
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/catching_fire.jpg' }
-      .back.face
-        %h3 Catching Fire
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/foundation.jpg' }
-      .back.face
-        %h3 Foundation
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/mockingjay.jpg' }
-      .back.face
-        %h3 Mockingjay
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/the_fountainhead.JPG' }
-      .back.face
-        %h3 The Fountainhead
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/lies_my_teacher_told_me.jpg' }
-      .back.face
-        %h3 Lies My Teacher Told Me
-        %p.comment Very interesting, it is a great book to just pick up and read a chapter when you have time.
-  .container
-    .card.shadow
-      .front.face
-        %img.book{ src: 'https://s3.amazonaws.com/tjohn/foundation_and_earth.jpg' }
-      .back.face
-        %h3 Foundation and Earth
+  - @books.each do |book|
+    .container
+      .card.shadow
+        .front.face
+          %img.book{ src: "#{book.url}" }
+        .back.face
+          %h3= book.title
+          %p.comment= book.comment
+
+
 %footer
 %a#home{ href: "/" } Home

@@ -10,12 +10,23 @@ helpers HTTPAuth
 get '/books' do
   @title = "Books"
   @books = Book.all
+
   haml :books
 end
 
+get '/view' do
+  protected!
+
+  @title = "All Books"
+  @books = Book.all
+
+  haml :view
+end
 get '/new' do
   protected!
+
   @title = "New Book"
+
   haml :new
 end
 
@@ -24,11 +35,12 @@ post '/create' do
 
   Book.create(params[:book])
 
-  redirect to('/books'), 303
+  redirect to('/view'), 303
 end
 
 get '/*' do
   @title = "Home"
+
   haml :index
 end
 

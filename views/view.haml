@@ -1,0 +1,17 @@
+%link{href: "assets/stylesheets/view.css", rel: "stylesheet", type: "text/css"}/
+#header
+#wrapper
+  %table.table
+    %thead
+      %tr
+        %th Title
+        %th URL
+        %th Comment
+        %th
+    %tbody
+      - @books.each do |book|
+        %tr
+          %td= book.title
+          %td= book.url
+          %td= book.comment
+          %td Edit

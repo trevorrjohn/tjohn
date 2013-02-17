@@ -5,7 +5,7 @@
   #content
     %form#new_book.new_book{ action: "create", method: "post", accept: { charset: "UTF-8" } }
       %label{ for: "book_title" } Title
-      %input.text_input#book_title{ name: "book[title]", type: "text" }
+      %input.text_input#book_title{ name: "book[title]", type: "text", autocomplete: 'off' }
       %br/
       %label{ for: "book_url" } URL
       %input.text_input#book_url{ name: "book[url]", type: "url" }

@@ -1,0 +1,42 @@
+#header {
+  background: #ebebeb;
+  border-right: 1px solid #414141;
+  border-left: 1px solid #414141;
+  position: relative;
+  width: 1202px;
+  min-height: 60px;
+  margin: -10px auto;
+}
+
+#body {
+  background-image: url("../images/background.jpg");
+  background-repeat: repeat;
+  background-size: 82%;
+  color: #414141;
+}
+
+#home {
+  color: #e2e2e2;
+  position: fixed;
+  bottom: 10px;
+  left: 25px;
+}
+
+#wrapper {
+  min-height: 1000px;
+  background: #ebebeb;
+  border-right: 1px solid #414141;
+  border-left: 1px solid #414141;
+  position: relative;
+  width: 1202px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+th {
+  font-weight: bold;
+}
+
+td {
+  padding: 5px 20px;
+}
