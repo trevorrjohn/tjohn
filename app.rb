@@ -1,39 +1,34 @@
 require 'sinatra'
 require 'haml'
+require 'sinatra/activerecord'
+require './config/environments'
+require './models/book'
 
-helpers do
-  def protected!
-    unless authorized?
-      response['WWW-Authenticate'] = %(Basic realm="Restricted Area")
-      throw(:halt, [401, "Not authorized\n"])
-    end
-  end
-
-  def authorized?
-    @auth ||=  Rack::Auth::Basic::Request.new(request.env)
-    @auth.provided? && @auth.basic? && @auth.credentials && @auth.credentials == credentials
-  end
-
-  def credentials
-    production? ? [ENV['username'], ENV['password']] : ['admin', 'admin']
-  end
-
-  def production?
-    Sinatra::Base.production?
-  end
-end
+require './helpers/application_helper'
+helpers HTTPAuth
 
 get '/books' do
+  @title = "Books"
+  @books = Book.all
   haml :books
 end
 
 get '/new' do
   protected!
-
+  @title = "New Book"
   haml :new
 end
 
+post '/create' do
+  protected!
+
+  Book.create(params[:book])
+
+  redirect to('/books'), 303
+end
+
 get '/*' do
+  @title = "Home"
   haml :index
 end
 

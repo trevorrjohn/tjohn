@@ -84,3 +84,37 @@
 .comment {
   text-align: left;
 }
+
+
+#content {
+  margin: 0
+  padding-right: 40px;
+}
+
+h1 {
+  background: #ebebeb;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+form, h1 {
+  color: #414141;
+  padding-left: 40px;
+}
+
+label {
+  width: 200px;
+  min-width: 200px;
+}
+
+.text_input {
+  position: relative;
+  width: 200px;
+}
+
+#books {
+  color: #e2e2e2;
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+}

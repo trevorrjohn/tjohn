@@ -1,7 +1,8 @@
 class CreateBooksTable < ActiveRecord::Migration
   def up
     create_table :books do |t|
-      t.text :link
+      t.text :title
+      t.text :url
       t.text :comment
     end
   end
