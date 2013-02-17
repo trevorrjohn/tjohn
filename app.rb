@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'haml'
 
 helpers do
   def protected!
