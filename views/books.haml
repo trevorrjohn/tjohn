@@ -7,22 +7,21 @@
     %link{href: "assets/stylesheets/application.css", rel: "stylesheet", type: "text/css"}/
     %link{href: "assets/stylesheets/books.css", rel: "stylesheet", type: "text/css"}/
     %script{ src: "//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" }
-    %script{ src: "assets/javascripts/masonry.js" }
     %link{href: "http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700", rel: "stylesheet", type: "text/css"}/
     %meta{content: "width=device-width, initial-scale=.67, user-scalable=no", name: "viewport"}/
   %body#body
     %a#home{ href: "/" } Home
 
-    #container
-      .item
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue augue, convallis et fermentum non
-      .item
-        %p Maecenas molestie, neque porta scelerisque molestie, massa nunc ultricies arcu, in luctus lorem sem eget mi. Sed pharetra lectus a tellus mollis elementum. Etiam a ligula eros. Phasellus luctus massa sit amet purus vulputate adipiscing. Nullam adipiscing vestibulum justo sed semper. Etiam eu dolor vel lorem gravid
-      .item
-        %p Nam ut augue sed nunc euismod facilisis vel eu massa. Etiam luctus sodales pellentesque. Phasellus mollis semper libero ac suscipit. Donec volutpat, nisl condimentum mollis accumsan, ante justo porta mi, ac accumsan urna enim a nisl. Nunc ut velit augue. In at dolor dui, sit amet bibendum eros. Fusce sit amet ante risus, nec suscipit magna. Maecenas at lectus sit amet ligula ornare mattis. Nam hendreri
-      .item
-        %p Donec quam diam, venenatis faucibus ultricies vitae, condimentum non justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacus tortor, dapibus lacinia fermentum eu, congue vitae elit. Aenean risus magna, eleifend nec commodo ut, venenatis eget lectus. In 
-      .item
-        %p Aliquam at nibh mauris. Donec enim nisl, tristique sed gravida in, porttitor eget dui. Praesent at arcu turpis. Praesent adipiscing, elit sit amet laoreet posuere, massa eros placerat magna, vel eleifend nunc est eget enim. Donec fringilla dapibus cursus. Nam viverra varius nibh, nec varius elit vestibulum sit amet. Morbi eu arcu at nulla feugiat porta. Etiam non elit enim, id dapibus urna. Mauris suscipit massa eget ipsum tristique sollicitudin. Proin sapien ipsum
-      .item
-        %p some words of advice about this book
+    #wrapper
+      .container
+        .card.shadow
+          .front.face
+            %img.book{ src: 'https://s3.amazonaws.com/tjohn/The_Eye_of_the_World_UK.jpg' }
+          .back.face
+            %p Something good
+      .container
+        .card.shadow
+          .front.face
+            %img.book{ src: 'http://www.fantasy-fan.org/files/Martin/Song_Of_Ice_And_Fire_Art_Ned_Stark.jpg' }
+          .back.face
+            %p This on is good
