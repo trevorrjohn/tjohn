@@ -39,7 +39,7 @@ post '/books/create' do
   redirect to('/books/view'), 303
 end
 
-post '/books/update' do
+patch '/books/update' do
   protected!
 
   @book = Book.find(params[:id])

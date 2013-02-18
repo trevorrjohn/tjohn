@@ -4,7 +4,8 @@
 #wrapper
   %h1 Edit a book
   #content
-    %form#edit_book.edit_book{ action: "/update", method: "post", accept: { charset: "UTF-8" } }
+    %form#edit_book.edit_book{ action: "/books/update", method: "post", accept: { charset: "UTF-8" } }
+      %input{ type: 'hidden', name: '_method', value: 'patch' }
 
       %input{ type: 'hidden', name: 'id', value: "#{ @book.id }" }
 
