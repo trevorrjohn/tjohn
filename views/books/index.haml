@@ -1,0 +1,17 @@
+%link{href: "/assets/stylesheets/books.css", rel: "stylesheet", type: "text/css"}/
+%script{ src: "/assets/javascripts/masonry.js" }
+%script{ src: "/assets/javascripts/books.js" }
+
+#header
+#wrapper
+  - @books.each do |book|
+    .container
+      .card.shadow
+        .front.face
+          %img.book{ src: "#{book.url}" }
+        .back.face
+          %h3= book.title
+          %p.comment= book.comment
+
+%footer
+%a#home{ href: "/" } Home

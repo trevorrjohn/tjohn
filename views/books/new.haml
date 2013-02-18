@@ -1,9 +1,10 @@
-%link{href: "assets/stylesheets/books.css", rel: "stylesheet", type: "text/css"}/
+%link{href: "/assets/stylesheets/books.css", rel: "stylesheet", type: "text/css"}/
 #header
 #wrapper
   %h1 Create a book
   #content
     %form#new_book.new_book{ action: "create", method: "post", accept: { charset: "UTF-8" } }
+
       %label{ for: "book_title" } Title
       %input.text_input#book_title{ name: "book[title]", type: "text", autocomplete: 'off' }
       %br/

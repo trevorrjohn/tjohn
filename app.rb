@@ -14,47 +14,47 @@ get %r{(books\/index\.html|books\z|books\/\z)} do
   haml :"books/index"
 end
 
-get '/view' do
+get '/books/view' do
   protected!
 
   @title = "All Books"
   @books = Book.all
 
-  haml :view
+  haml :"books/view"
 end
 
-get '/new' do
+get '/books/new' do
   protected!
 
   @title = "New Book"
 
-  haml :new
+  haml :"books/new"
 end
 
-post '/create' do
+post '/books/create' do
   protected!
 
   Book.create(params[:book])
 
-  redirect to('/view'), 303
+  redirect to('/books/view'), 303
 end
 
-post '/update' do
+post '/books/update' do
   protected!
 
   @book = Book.find(params[:id])
   @book.update_attributes(params[:book])
 
-  redirect to('/view'), 303
+  redirect to('/books/view'), 303
 end
 
-get "/edit/:id" do
+get "/books/edit/:id" do
   protected!
 
   @title = "Edit"
   @book = Book.find(params[:id])
 
-  haml :edit
+  haml :"books/edit"
 end
 
 get '/*' do
