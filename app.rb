@@ -7,11 +7,11 @@ require './models/book'
 require './helpers/application_helper'
 helpers HTTPAuth
 
-get '/books' do
+get %r{(books\/index\.html|books\z|books\/\z)} do
   @title = "Books"
   @books = Book.all
 
-  haml :books
+  haml :"books/index"
 end
 
 get '/view' do
