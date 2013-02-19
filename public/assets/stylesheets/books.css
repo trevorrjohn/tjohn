@@ -71,7 +71,8 @@
   text-align: center;
   border: 1px solid #eeeeee;
   background: #414141;
-  overflow: scroll;
+  -webkit-overflow: scroll;
+  -moz-overflow: hidden;
 }
 
 .comment {
