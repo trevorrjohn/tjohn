@@ -6,11 +6,10 @@ require './models/book'
 
 require './helpers/application_helper'
 require './helpers/assets_helper'
-helpers HTTPAuth
-helpers Assets
 
 get %r{(books\/index\.html|books\z|books\/\z)} do
-  js %w(jquery masonry.js books.js)
+  js %w(jquery masonry books)
+  css %w(books)
 
   @title = "Books"
   @books = Book.all
@@ -19,6 +18,7 @@ get %r{(books\/index\.html|books\z|books\/\z)} do
 end
 
 get '/books/view' do
+  css %w(view)
   protected!
 
   @title = "All Books"
@@ -30,6 +30,7 @@ end
 get '/books/new' do
   protected!
 
+  css %w(books)
   @title = "New Book"
 
   haml :"books/new"
@@ -38,6 +39,7 @@ end
 post '/books/create' do
   protected!
 
+  css %w(books)
   Book.create(params[:book])
 
   redirect to('/books/view'), 303
@@ -46,6 +48,7 @@ end
 patch '/books/update' do
   protected!
 
+  css %w(books)
   @book = Book.find(params[:id])
   @book.update_attributes(params[:book])
 
@@ -55,6 +58,7 @@ end
 get "/books/edit/:id" do
   protected!
 
+  css %w(books)
   @title = "Edit"
   @book = Book.find(params[:id])
 
@@ -62,6 +66,7 @@ get "/books/edit/:id" do
 end
 
 get '/*' do
+  css %w(main)
   @title = "Home"
 
   haml :index
