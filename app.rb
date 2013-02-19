@@ -5,9 +5,13 @@ require './config/environments'
 require './models/book'
 
 require './helpers/application_helper'
+require './helpers/assets_helper'
 helpers HTTPAuth
+helpers Assets
 
 get %r{(books\/index\.html|books\z|books\/\z)} do
+  js %w(jquery masonry.js books.js)
+
   @title = "Books"
   @books = Book.all
 
