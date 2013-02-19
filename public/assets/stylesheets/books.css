@@ -7,6 +7,13 @@
   margin: 60px auto;
 }
 
+.card_wrapper {
+  width: 95%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .container {
   margin: 15px;
   text-align: center;

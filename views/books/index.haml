@@ -1,13 +1,14 @@
 %link{ href: "/assets/stylesheets/books.css", rel: "stylesheet", type: "text/css" }
 
-#wrapper
-  - @books.each do |book|
-    .container
-      .card
-        .front.face
-          %img.book{ src: "#{book.url}" }
-        .back.face
-          %h3= book.title
-          %p.comment= book.comment
+.card_wrapper
+  #wrapper
+    - @books.each do |book|
+      .container
+        .card
+          .front.face
+            %img.book{ src: "#{book.url}" }
+          .back.face
+            %h3= book.title
+            %p.comment= book.comment
 
 %a#bottom_left{ href: "/" } Home
