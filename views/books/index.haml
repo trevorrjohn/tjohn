@@ -3,6 +3,7 @@
 %script{ src: "/assets/javascripts/books.js" }
 
 #header
+  %a#home{ href: "/" } Home
 #wrapper
   - @books.each do |book|
     .container
@@ -12,6 +13,3 @@
         .back.face
           %h3= book.title
           %p.comment= book.comment
-
-%footer
-  %a#home{ href: "/" } Home

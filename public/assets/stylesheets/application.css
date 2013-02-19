@@ -8,16 +8,32 @@
   color: #e2e2e2;
 }
 
-#home {
+#home, #books, #new {
+  background: #191c24;
+  line-height: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 0 auto;
+  border-radius: 5px;
   color: #e2e2e2;
+}
+
+#new {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  width: 44px;
+  text-align: center;
+}
+
+#home {
   position: fixed;
   bottom: 10px;
   left: 25px;
 }
 
 #books {
-  color: #e2e2e2;
   position: fixed;
-  bottom: 10px;
+  bottom: 60px;
   right: 30px;
 }

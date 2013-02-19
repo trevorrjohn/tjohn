@@ -1,35 +1,25 @@
-#header {
-  background: #ebebeb;
-  border-right: 1px solid #414141;
-  border-left: 1px solid #414141;
-  position: relative;
-  width: 1202px;
-  min-height: 60px;
-  margin: -10px auto;
+#home {
+  background: #191c24;
+  line-height: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  margin: 0 auto;
+  border-radius: 5px;
+  color: white;
 }
 
 #body {
-  background-image: url("../images/background.jpg");
-  background-repeat: repeat;
-  background-size: 82%;
+  background: #ebebeb;
 }
 
 #wrapper {
-  min-height: 1000px;
-  background: #ebebeb;
-  border-right: 1px solid #414141;
-  border-left: 1px solid #414141;
-  position: relative;
-  width: 1202px;
   margin: 0 auto;
   padding-bottom: 60px;
 }
 
 .container {
-  float: left;
-  width: 220px;
-  margin: 10px;
-  z-index: 1;
+  margin: 15px;
+  text-align: center;
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
 }
