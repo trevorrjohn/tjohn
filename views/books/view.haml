@@ -12,12 +12,13 @@
       - @books.each do |book|
         %tr
           %td= book.title
-          %td= book.url
+          %td.url
+            %a{ href: "#{ book.url }" }= book.url
           %td= book.comment
           %td
             %a{ href: "/books/edit/#{ book.id }" } Edit
 
 %footer
-  %a#home{ href: "/" } Home
-  %a#books{ href: "/books" } Books
-  %a#new{ href: "/books/new" } New
+  %a#bottom_left{ href: "/" } Home
+  %a#bottom_right{ href: "/books" } Books
+  %a#top_right{ href: "/books/new" } New

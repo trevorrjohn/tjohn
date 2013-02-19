@@ -1,6 +1,6 @@
 %link{href: "/assets/stylesheets/books.css", rel: "stylesheet", type: "text/css"}/
-#header
-#wrapper
+
+.wrapper
   %h1 Create a book
   #content
     %form#new_book.new_book{ action: "create", method: "post", accept: { charset: "UTF-8" } }
@@ -14,9 +14,9 @@
       %label{ for: "book_comment" } Comment
       %textarea#book_comment{ name: "book[comment]", type: "text", rows: 7, cols: 30 }
       %br/
-      %input{ type: "submit", value: "Save book" }
+      %input.btn{ type: "submit", value: "Save book" }
 
 %footer
-  %a#home{ href: "/" } Home
-  %a#books{ href: "/books" } Books
-  %a#new{ href: "/books/view" } View
+  %a#bottom_left{ href: "/" } Home
+  %a#bottom_right{ href: "/books" } Books
+  %a#top_right{ href: "/books/view" } View
