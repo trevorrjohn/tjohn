@@ -3,7 +3,7 @@ require 'sinatra/base'
 module Sinatra
   module Javascripts
     def js(scripts=[])
-      @js ||= ['application']
+      @js ||= []
       @js << scripts
     end
 

@@ -7,6 +7,7 @@
         %th URL
         %th Comment
         %th
+        %th
     %tbody
       - @books.each do |book|
         %tr
@@ -16,6 +17,8 @@
           %td= book.comment
           %td
             %a{ href: "/books/edit/#{ book.id }" } Edit
+          %td
+            %a.delete_link{ href: "/books/#{ book.id }" } Delete
 
 %footer
   %a#bottom_left{ href: "/" } Home

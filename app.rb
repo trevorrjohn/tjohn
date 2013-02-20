@@ -18,8 +18,10 @@ get %r{(books\/index\.html|books\z|books\/\z)} do
 end
 
 get '/books/view' do
-  css %w(view)
   protected!
+
+  css %w(view)
+  js %w(jquery delete_link)
 
   @title = "All Books"
   @books = Book.all
@@ -63,6 +65,14 @@ get "/books/edit/:id" do
   @book = Book.find(params[:id])
 
   haml :"books/edit"
+end
+
+delete "/books/:id" do
+  protected!
+
+  book = Book.find(params[:id]).destroy
+
+  redirect to('/books/view'), 303
 end
 
 get '/*' do
