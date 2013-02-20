@@ -12,7 +12,7 @@ get %r{(books\/index\.html|books\z|books\/\z)} do
   css %w(books)
 
   @title = "Books"
-  @books = Book.all
+  @books = Book.where("url <> ''")
 
   haml :"books/index"
 end
