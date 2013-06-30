@@ -1,8 +1,9 @@
-source 'https://rubygems.com'
+source 'http://rubygems.org'
+ruby '1.9.3'
 
-gem 'sinatra', '1.3.4'
+gem 'sinatra'
 
 gem 'haml'
-gem 'pg', '0.14.1'
+gem 'pg'
 gem 'sinatra-activerecord', '~> 1.2.2'
 gem 'thin', '>= 1.5.0'
