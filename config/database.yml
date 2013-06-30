@@ -1,8 +1,8 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: tjohn_development
-  username: trevorjohn
+  database: tjohn_dev
+  username: postgres
   password:
   pool: 5
   min_messages: WARNING
