@@ -17,6 +17,10 @@ get %r{(books\/index\.html|books\z|books\/\z)} do
   haml :"books/index"
 end
 
+get '/.well-known/acme-challenge/:id' do
+  'aCCYRoiTgcgdqAtNruLPVOybcTjlzzB8vflP25w9nc8.yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o'
+end
+
 get '/books/view' do
   protected!
 
