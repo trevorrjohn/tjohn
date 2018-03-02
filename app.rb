@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'sinatra'
 require 'haml'
 require 'sinatra/activerecord'
@@ -73,6 +74,11 @@ delete "/books/:id" do
   book = Book.find(params[:id]).destroy
 
   redirect to('/books/view'), 303
+end
+
+get "/.well-known/acme-challenge/:id" do
+  "Kw4cNXWRsL2f9fmSfamEWNTqPctwA8DXKNeTeiB8nHM." \
+    "yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o"
 end
 
 get '/*' do
