@@ -6,5 +6,6 @@ gem 'sinatra'
 
 gem 'haml'
 gem 'pg'
-gem 'sinatra-activerecord', '~> 2.0.8'
 gem 'puma'
+gem 'rake'
+gem 'sinatra-activerecord', '~> 2.0.8'
