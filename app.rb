@@ -78,8 +78,19 @@ delete "/books/:id" do
 end
 
 get "/.well-known/acme-challenge/:id" do
-  "_qm1ea7P3s5IzWYT3SSD0Jpbb4StnRig_rBfamy4FkM." \
-    "yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o"
+  if params[:id] == "_qm1ea7P3s5IzWYT3SSD0Jpbb4StnRig_rBfamy4FkM"
+    "_qm1ea7P3s5IzWYT3SSD0Jpbb4StnRig_rBfamy4FkM" \
+      ".yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o"
+  elsif params[:id] == "9XAySknZJCPSWtKf8v6xpT122m6IzUAr4TmcjoFxusA"
+    "9XAySknZJCPSWtKf8v6xpT122m6IzUAr4TmcjoFxusA" \
+      ".yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o"
+  elsif params[:id] == "EX8aEXcmm34_mY_3yE4Q78tjdKRawMooBd-Diozz8xs"
+    "EX8aEXcmm34_mY_3yE4Q78tjdKRawMooBd-Diozz8xs" \
+      ".yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o"
+  elsif params[:id] == "qnZHLZeUYL6Q60Ij9mSussHYyrOnbWr8scox6mIdMg0"
+    "qnZHLZeUYL6Q60Ij9mSussHYyrOnbWr8scox6mIdMg0" \
+      ".yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o"
+  end
 end
 
 get '/*' do
