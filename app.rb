@@ -18,7 +18,7 @@ get %r{(books\/index\.html|books\z|books\/\z)} do
 end
 
 get '/.well-known/acme-challenge/:id' do
-  'QR0G6ZDMuOrI1_xkxfcL_FPr5iB2LQCrHioZAw_UKsk.' \
+  '_qm1ea7P3s5IzWYT3SSD0Jpbb4StnRig_rBfamy4FkM.' \
     'yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o'
 end
 
