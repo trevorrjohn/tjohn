@@ -9,7 +9,7 @@ require './models/book'
 require './helpers/application_helper'
 require './helpers/assets_helper'
 
-get %r{(books\/index\.html|books\z|books\/\z)} do
+get '/books' do
   js %w(jquery masonry books)
   css %w(books)
 
