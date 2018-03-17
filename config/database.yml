@@ -10,8 +10,10 @@ development:
 production:
   adapter: postgresql
   encoding: unicode
-  database: tjohn_production
   pool: 5
-  username: postgres
-  password:
   min_messages: WARNING
+  database: <%= ENV['RDS_DB_NAME'] || tjohn_production %>
+  username: <%= ENV['RDS_USERNAME'] || postgres %>
+  password: <%= ENV['RDS_PASSWORD'] %>
+  host: <%= ENV['RDS_HOSTNAME'] %>
+  port: <%= ENV['RDS_PORT'] %>
