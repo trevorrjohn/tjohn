@@ -79,14 +79,9 @@ delete "/books/:id" do
 end
 
 
-get "/.well-known/acme-challenge/:id" do
-  if params[:id] == "_qm1ea7P3s5IzWYT3SSD0Jpbb4StnRig_rBfamy4FkM"
-    "_qm1ea7P3s5IzWYT3SSD0Jpbb4StnRig_rBfamy4FkM" \
-      ".yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o"
-  elsif params[:id] == "XOyfARktcU5pOpD-Cwstbv6ep0H_xmtTlgvDrKUEsWU"
-    "XOyfARktcU5pOpD-Cwstbv6ep0H_xmtTlgvDrKUEsWU" \
-      ".yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o"
-  end
+get "/statsu" do
+  status 200
+  'Ok'
 end
 
 get '/*' do
