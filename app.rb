@@ -3,8 +3,9 @@
 require 'sinatra'
 require 'haml'
 require 'sinatra/activerecord'
-require './config/environments'
 require './models/book'
+
+set :database_file, 'config/database.yml'
 
 require './helpers/application_helper'
 require './helpers/assets_helper'
