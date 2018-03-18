@@ -77,12 +77,13 @@ delete "/books/:id" do
   redirect to('/books/view'), 303
 end
 
+
 get "/.well-known/acme-challenge/:id" do
   if params[:id] == "_qm1ea7P3s5IzWYT3SSD0Jpbb4StnRig_rBfamy4FkM"
     "_qm1ea7P3s5IzWYT3SSD0Jpbb4StnRig_rBfamy4FkM" \
       ".yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o"
-  elsif params[:id] == "2bpE3J6web1b9L-Xx246dzNOsHOzobNKT4f72ynzAQk"
-    "2bpE3J6web1b9L-Xx246dzNOsHOzobNKT4f72ynzAQk" \
+  elsif params[:id] == "XOyfARktcU5pOpD-Cwstbv6ep0H_xmtTlgvDrKUEsWU"
+    "XOyfARktcU5pOpD-Cwstbv6ep0H_xmtTlgvDrKUEsWU" \
       ".yPMLAaCA631RGsUf745CqXh--yYi0-WAIgur-1U6l7o"
   end
 end
